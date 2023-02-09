@@ -1,0 +1,41 @@
+.activeInfoBlock{
+    margin-bottom: 10px;
+    .nameBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    .location{
+        font-size: 32px;
+        color:#1976d2;
+        margin-top: 7px;
+    }
+    }
+    .cityName{
+       font-size: 36px;
+
+    }
+    .day{
+        font-size: 30px 
+    }
+    .tempInfo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-left: 55px;
+      img{
+        width: 60px;
+        height: 60px;
+      }
+        .temp{
+            font-size: 34px;
+        }
+        .addInfo{
+            display: flex;
+            flex-direction: column;
+           text-align: left;
+            align-items: flex-start;
+        }
+    }
+}

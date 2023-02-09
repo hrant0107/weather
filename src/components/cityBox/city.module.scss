@@ -1,0 +1,15 @@
+.box{
+padding: 20px;
+ border: 3px solid rgb(232, 220, 220);
+ border-radius: 22px;
+ max-width: 216px;
+ width: 100%;
+ cursor: pointer;
+  position: relative;
+ .deleteIcon{
+position: absolute;
+top: 10px;
+right: 5px;
+
+ }
+}

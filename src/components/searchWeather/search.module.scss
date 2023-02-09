@@ -1,0 +1,25 @@
+.searchBlock{
+    width: 100%;
+    form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+        .location{
+            font-size: 55px;
+            color:#1976d2;
+            cursor: pointer;
+        }
+        .input{
+       max-width: 400px;
+       width: 100%;
+       
+        }
+        .btn{
+            min-height: 56px;
+        }
+
+    }
+}
+

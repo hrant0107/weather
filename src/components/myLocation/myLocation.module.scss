@@ -1,0 +1,25 @@
+.locationBlock{
+    margin: 25px auto;
+    text-align: center;
+    max-width: 60%;
+    border: 3px solid rgb(232, 220, 220);
+    border-radius: 22px;
+    position: relative;
+    .bookMarkIcon{
+     position: absolute;
+     top: 20px;
+     right: 30px;
+     font-size: 50px;
+     color: #1976d2;
+     cursor: pointer;
+    }
+    .hours{
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0;   
+    }
+}
+
+
+
+
