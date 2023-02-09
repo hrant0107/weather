@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/hrant0107/weather/static/css/main.e5502e18.css",
+    "main.js": "/hrant0107/weather/static/js/main.7a80c13a.js",
+    "index.html": "/hrant0107/weather/index.html",
+    "main.e5502e18.css.map": "/hrant0107/weather/static/css/main.e5502e18.css.map",
+    "main.7a80c13a.js.map": "/hrant0107/weather/static/js/main.7a80c13a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5502e18.css",
+    "static/js/main.7a80c13a.js"
+  ]
+}
