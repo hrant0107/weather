@@ -9,6 +9,7 @@ import ErrorMessage from "./components/errorMessage/ErrorMessage";
 
 import { API_KEY, API_URL, API_URL_WEATHER, CITIES } from "./constant";
 import axios from "axios";
+import { getWeatherByForecast, getWeatherByWeather } from "./services/weather";
 
 export const weatherContext = createContext();
 
@@ -36,15 +37,14 @@ const App = () => {
   const myLocationWeather = useCallback(async (lat, long) => {
     try {
       setLoading(true);
-      const response = await axios.get(
-        `${API_URL_WEATHER}appid=${API_KEY}&lat=${lat}&lon=${long}&units=metric`
+      const { data: response } = await getWeatherByWeather(
+        `appid=${API_KEY}&lat=${lat}&lon=${long}&units=metric`
       );
-      const { data } = await axios.get(
-        `${API_URL}appid=${API_KEY}&cnt=40&lat=${lat}&lon=${long}&units=metric`
+      const { data } = await getWeatherByForecast(
+        `appid=${API_KEY}&cnt=40&lat=${lat}&lon=${long}&units=metri`
       );
-      const dataWeather = await response.data;
       setForcastData(data);
-      setWeatherData(dataWeather);
+      setWeatherData(response);
       setLoading(false);
     } catch (error) {
       console.error(error.message);
@@ -55,16 +55,14 @@ const App = () => {
     async (cityName) => {
       try {
         setLoading(true);
-        const { data } = await axios.get(
-          `${API_URL_WEATHER}q=${cityName}&appid=${API_KEY}&units=metric`
+        const { data } = await getWeatherByWeather(
+          `q=${cityName}&appid=${API_KEY}&units=metric`
         );
-        const response = await axios.get(
-          `${API_URL}q=${cityName}&cnt=40&appid=${API_KEY}&units=metric`
+        const { data: response } = await getWeatherByForecast(
+          `q=${cityName}&cnt=40&appid=${API_KEY}&units=metric`
         );
-        const dataWeather = await response.data;
-
         setWeatherData(data);
-        setForcastData(dataWeather);
+        setForcastData(response);
         setLoading(false);
         setError(false);
       } catch (error) {
